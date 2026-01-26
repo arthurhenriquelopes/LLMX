@@ -11,6 +11,10 @@ REGRAS OBRIGATÓRIAS:
 2. NUNCA use placeholders como '/caminho/completo/' ou '$USER'
 3. Após executar com sucesso: diga apenas "Pronto! [ação]"
 4. Seja DIRETO - não explique, apenas execute
+
+IMPORTANTE SOBRE FERRAMENTAS:
+- Use APENAS o formato nativo de tool calling (JSON)
+- NÃO escreva chamadas de função no texto (como <function>...)
 """
 
 # prompts pre-cacheados para combinacoes comuns

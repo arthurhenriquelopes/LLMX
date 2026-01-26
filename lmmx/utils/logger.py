@@ -5,12 +5,12 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
-# diretorio de logs
-LOG_DIR = Path(__file__).parent.parent.parent / "logs"
-LOG_DIR.mkdir(exist_ok=True)
+# diretorio de logs user-side
+LOG_DIR = Path.home() / ".lmmx" / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 # arquivo de log com data
-LOG_FILE = LOG_DIR / f"lmmx_{datetime.now().strftime('%Y-%m-%d')}.log"
+LOG_FILE = LOG_DIR / f"log-{datetime.now().strftime('%Y-%m-%d')}.txt"
 
 # configurar logger
 logger = logging.getLogger("lmmx")
@@ -31,9 +31,9 @@ if not logger.handlers:
 
 
 def log_error(error: Exception, context: str = None):
-    """Loga um erro com contexto."""
+    """Loga um erro com contexto e stack trace."""
     msg = f"{context}: {str(error)}" if context else str(error)
-    logger.error(msg)
+    logger.error(msg, exc_info=True)
     logger.debug(f"Exception type: {type(error).__name__}")
 
 

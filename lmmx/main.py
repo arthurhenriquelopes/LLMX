@@ -172,10 +172,13 @@ def main():
         print_success(f"conectado ({model_config.get_current_model()})")
     except ValueError as e:
         print_error(str(e))
-        print_info("verifique sua GROQ_API_KEY no arquivo .env")
+        print_info("verifique suas chaves com /key")
         sys.exit(1)
     except Exception as e:
+        from .utils.logger import log_error, get_log_path
+        log_error(e, "Erro fatal ao inicializar")
         print_error(f"erro ao inicializar: {str(e)}")
+        print_info(f"log salvo em: {get_log_path()}")
         sys.exit(1)
     
     # loop principal
@@ -247,6 +250,12 @@ def main():
             console.print()
             print_info("ate mais!")
             break
+        except Exception as e:
+            from .utils.logger import log_error, get_log_path
+            log_error(e, "Erro durante execucao")
+            print_error(f"erro inesperado: {str(e)}")
+            print_info(f"detalhes salvos em: {get_log_path()}")
+            continue
 
 
 if __name__ == "__main__":

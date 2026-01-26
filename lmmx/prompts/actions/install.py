@@ -1,16 +1,12 @@
 """Micro-prompt para instalar pacotes."""
 
 INSTALL_ACTION = {
-    "prompt": """INSTALAR PACOTE:
-1. PRIMEIRO: get_package_info("pacote") para verificar se já está instalado
-2. Se NÃO instalado: run_sudo_command("apt install -y pacote")
-3. PARE após uma tentativa - não tente variações!
+    "prompt": """INSTALAÇÃO DE PACOTES:
+Para instalar: use a ferramenta run_sudo_command com o comando "apt install -y <pacote>".
+Antes de instalar, verifique se já existe com get_package_info.
 
-IMPORTANTE:
-- Use APENAS run_sudo_command (não run_command com sudo)
-- Use -y para confirmar automaticamente
-- Se falhar, informe o erro - NÃO tente outras formas
+NÃO tente adivinhar nomes de pacotes. Se falhar, pare e avise.
 """,
     "tools": ["run_sudo_command", "get_package_info"],
-    "keywords": ["instalar", "instale", "install", "apt install", "apt-get"],
+    "keywords": ["instalar", "instale", "install", "apt install", "apt-get", "atualize", "update", "upgrade"],
 }
