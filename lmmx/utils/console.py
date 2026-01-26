@@ -119,9 +119,9 @@ def confirm_sudo_command(command: str) -> bool:
     console.print()
     console.print(Text("⚠ SUDO", style="bold yellow"))
     console.print(Text(f"  {command}", style="bold white"))
-    console.print(Text("  Executar? [y/N]: ", style="yellow"), end="")
+    console.print(Text("  Executar? [Y/n]: ", style="yellow"), end="")
     response = input().strip().lower()
-    return response in ['y', 'yes', 's', 'sim']
+    return response not in ['n', 'no', 'nao', 'não']
 
 
 def confirm_command(command: str) -> bool:
