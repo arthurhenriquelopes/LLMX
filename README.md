@@ -1,6 +1,7 @@
-# LLMx
 
-Assistente de terminal pra Linux usando LLMs. Faz as coisas que você pediria pro ChatGPT, só que direto no terminal e com acesso real ao seu sistema.
+<img width="362" height="170" alt="llmx" src="https://github.com/user-attachments/assets/090b0dd3-314d-4c88-8603-c1dd316da33f" />
+
+Assistente de terminal pra Linux usando LLMs. Rapido, pratico e com acesso real ao seu sistema.
 
 ## O que faz
 
@@ -9,6 +10,12 @@ Assistente de terminal pra Linux usando LLMs. Faz as coisas que você pediria pr
 - Executa comandos user e sudo
 - Cria scripts de automação
 - Funciona com Groq e OpenRouter*
+
+## Requisitos
+
+- **Sistema**: Linux (Debian-based recomendado)
+- **Python**: 3.10 ou superior
+- **Pacotes**: `python3-venv`
 
 ## Instalação
 
@@ -33,11 +40,7 @@ O script de instalação cria um atalho no menu de aplicativos automaticamente.
 
 ## Configuração
 
-Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys ficam salvas em `~/.lmmx/api_keys.txt`.
-
-Onde conseguir:
-- Groq: https://console.groq.com/keys
-- OpenRouter: https://openrouter.ai/keys
+Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys podem ser verificadas em `~/.llmx/api_keys.txt`.
 
 ## Uso
 
@@ -45,27 +48,18 @@ Onde conseguir:
 python -m lmmx
 ```
 
-Alguns exemplos:
-
-```
-› quanta RAM tenho?
-Você tem 16GB de RAM, 8.2GB em uso.
-
-› liste a pasta Downloads
-[lista os arquivos]
-
-› compacte a pasta Documents pra zip no Desktop
-→ cd ~/Documents && zip -r ~/Desktop/documents.zip .
-Confirmar? [Y/n]: 
-```
+<p>
+  <img width="49%" src="https://github.com/user-attachments/assets/b91e5395-8fdd-4759-aeb4-1a193c8dcfb3" />
+  <img width="49%" src="https://github.com/user-attachments/assets/3185c6ca-620d-4b8b-8bd9-a723387bf322" />
+</p>
 
 ## Comandos
 
-- `/model` - trocar modelo
-- `/key` - adicionar chave de API
-- `/keys` - ver chaves salvas
-- `/clear` - limpar histórico
-- `/exit` - sair
+`/model` - trocar modelo
+`/key` - adicionar chave de API
+`/keys` - ver chaves salvas
+`/clear` - limpar histórico
+`/exit` - sair
 
 ## Modelos disponíveis
 
