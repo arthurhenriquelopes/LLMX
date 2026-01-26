@@ -61,15 +61,14 @@ class ModelConfig:
         self._current_model = os.getenv("LMMX_MODEL", DEFAULT_MODEL)
         self._current_provider = get_provider_for_model(self._current_model)
         
-        # carrega chaves de api - primeiro do arquivo local, depois do .env
+        # carrega chaves de api do arquivo local
         self._api_keys = {}
         self._load_api_keys()
         
         self._current_key_index = 0
     
     def _load_api_keys(self):
-        """Carrega chaves de api do arquivo local e .env."""
-        # primeiro tenta carregar do arquivo local
+        """Carrega chaves de api do arquivo local."""
         try:
             from .api_keys import load_api_keys
             local_keys = load_api_keys()
@@ -77,21 +76,6 @@ class ModelConfig:
                 self._api_keys[provider] = keys.copy()
         except Exception:
             pass
-        
-        # depois carrega do .env como fallback (nao sobrescreve)
-        if "groq" not in self._api_keys:
-            groq_keys = []
-            for key_name in ["GROQ_API_KEY", "GROQ_API_KEY_2", "GROQ_API_KEY_3"]:
-                key = os.getenv(key_name)
-                if key:
-                    groq_keys.append(key)
-            if groq_keys:
-                self._api_keys["groq"] = groq_keys
-        
-        if "openrouter" not in self._api_keys:
-            openrouter_key = os.getenv("OPENROUTER_API_KEY")
-            if openrouter_key:
-                self._api_keys["openrouter"] = [openrouter_key]
     
     def reload_api_keys(self):
         """Recarrega as chaves de api."""
