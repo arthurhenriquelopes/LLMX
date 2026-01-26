@@ -20,6 +20,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Ou, alternativamente:
+
+```bash
+git clone https://github.com/arthurhenriquelopes/LLMX.git
+cd LLMX
+chmod +x install.sh
+./install.sh
+```
+
+O script de instalação cria um atalho no menu de aplicativos automaticamente.
+
 ## Configuração
 
 Você precisa de uma API key. Rode o programa e use `/key` pra adicionar:
