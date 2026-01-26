@@ -33,7 +33,11 @@ O script de instalação cria um atalho no menu de aplicativos automaticamente.
 
 ## Configuração
 
-Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys podem ser verificadas em .llmx/
+Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys ficam salvas em `~/.lmmx/api_keys.txt`.
+
+Onde conseguir:
+- Groq: https://console.groq.com/keys
+- OpenRouter: https://openrouter.ai/keys
 
 ## Uso
 
