@@ -6,9 +6,9 @@ Assistente de terminal pra Linux usando LLMs. Faz as coisas que você pediria pr
 
 - Responde perguntas sobre o sistema (RAM, disco, processos)
 - Encontra e manipula arquivos
-- Executa comandos (sempre pede confirmação)
+- Executa comandos user e sudo
 - Cria scripts de automação
-- Funciona com Groq e OpenRouter
+- Funciona com Groq e OpenRouter*
 
 ## Instalação
 
@@ -33,30 +33,7 @@ O script de instalação cria um atalho no menu de aplicativos automaticamente.
 
 ## Configuração
 
-Você precisa de uma API key. Rode o programa e use `/key` pra adicionar:
-
-```bash
-python -m lmmx
-```
-
-```
-› /key
-
-═══ Gerenciar Chaves de API ═══
-
-Adicionar nova chave:
-  1. groq
-  2. openrouter
-  0. cancelar
-
-Provedor (0-2): 1
-Cole a chave de API do groq: gsk_xxxxx
-✓ chave do groq salva com sucesso!
-```
-
-Pega sua key em:
-- Groq: https://console.groq.com/keys
-- OpenRouter: https://openrouter.ai/keys
+Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys podem ser verificadas em .llmx/
 
 ## Uso
 
