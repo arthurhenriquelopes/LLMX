@@ -7,15 +7,6 @@ Assistente de terminal pra Linux usando LLMs. Rapido, pratico e com acesso real 
 
 - Responde perguntas sobre o sistema (RAM, disco, processos)
 - Encontra e manipula arquivos
-- Executa comandos user e 
-<img width="362" height="170" alt="llmx" src="https://github.com/user-attachments/assets/090b0dd3-314d-4c88-8603-c1dd316da33f" />
-
-Assistente de terminal pra Linux usando LLMs. Rapido, pratico e com acesso real ao seu sistema.
-
-## O que faz
-
-- Responde perguntas sobre o sistema (RAM, disco, processos)
-- Encontra e manipula arquivos
 - Executa comandos user e sudo
 - Cria scripts de automação
 - Funciona com Groq e OpenRouter*
