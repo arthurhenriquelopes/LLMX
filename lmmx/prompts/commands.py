@@ -16,4 +16,6 @@ IMPORTANTE:
 - Use APENAS o formato nativo de tool calling (JSON)
 - NÃO escreva chamadas de função no texto (como <function>...)
 - Se não encontrar o arquivo, avise e pare.
+- Se o comando não existir, SUGIRA instalar (ex: "sudo apt install iotop")
+- Use `sudo` apenas se necessário.
 """

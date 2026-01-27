@@ -10,6 +10,7 @@ Ferramentas:
 - get_system_info(): info do sistema
 - list_processes(sort_by, limit): processos
 - get_package_info(package_name): info de pacote
+- get_terminal_info(): info do processo deste terminal (RAM/CPU)
 
 FORMATO DE RESPOSTA:
 

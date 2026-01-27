@@ -81,6 +81,18 @@ SYSTEM_TOOLS = [
                 "required": ["package_name"]
             }
         }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "get_terminal_info",
+            "description": "Obtém informações sobre o processo atual do LLMX e seu terminal pai (PID, uso de CPU/RAM).",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
     }
 ]
 
@@ -226,6 +238,35 @@ def get_package_info(package_name: str) -> str:
         return f"erro ao consultar pacote: {str(e)}"
 
 
+def get_terminal_info() -> str:
+    """Obtem informacoes sobre o processo do terminal atual."""
+    try:
+        # pid atual (python script)
+        current_pid = os.getpid()
+        
+        # obter pid do pai (shell) e avo (terminal emulator)
+        ppid_result = subprocess.run(
+            ["ps", "-o", "ppid=", "-p", str(current_pid)],
+            capture_output=True, text=True
+        )
+        ppid = ppid_result.stdout.strip()
+        
+        # obter informacoes dos processos relacionados
+        # comm= (command name), %cpu, %mem, rss (resident sizes)
+        result = subprocess.run(
+            ["ps", "-p", f"{current_pid},{ppid}", "-o", "pid,ppid,user,%cpu,%mem,rss,comm,args"],
+            capture_output=True, text=True
+        )
+        
+        if result.returncode == 0:
+            return f"informacoes do terminal atual:\n```\n{result.stdout.strip()}\n```\n\nLEGENDA PID:\n- {current_pid}: LLMX (este processo)\n- {ppid}: Shell Pai (terminal)"
+        else:
+            return f"erro ao obter info do terminal: {result.stderr}"
+            
+    except Exception as e:
+        return f"erro: {str(e)}"
+
+
 def execute_system_tool(tool_name: str, arguments: dict) -> str:
     """Executa uma ferramenta de sistema."""
     tools_map = {
@@ -233,7 +274,9 @@ def execute_system_tool(tool_name: str, arguments: dict) -> str:
         "get_memory_info": get_memory_info,
         "get_system_info": get_system_info,
         "list_processes": list_processes,
+        "list_processes": list_processes,
         "get_package_info": get_package_info,
+        "get_terminal_info": get_terminal_info,
     }
     
     if tool_name not in tools_map:
@@ -242,7 +285,7 @@ def execute_system_tool(tool_name: str, arguments: dict) -> str:
     func = tools_map[tool_name]
     
     # trata funcoes sem parametros
-    if tool_name in ["get_disk_usage", "get_memory_info", "get_system_info"]:
+    if tool_name in ["get_disk_usage", "get_memory_info", "get_system_info", "get_terminal_info"]:
         return func()
     
     return func(**arguments)
