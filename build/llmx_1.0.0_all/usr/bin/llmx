@@ -1,0 +1,11 @@
+#!/bin/bash
+# Launcher para LLMX instalado em /opt
+cd "/opt/llmx"
+if [ -f ".venv/bin/activate" ]; then
+    source ".venv/bin/activate"
+else
+    echo "Erro: Ambiente virtual não encontrado em /opt/llmx/.venv"
+    echo "Tente reinstalar o pacote: sudo apt install --reinstall ./llmx_*.deb"
+    exit 1
+fi
+python3 -m lmmx.main "$@"

@@ -93,23 +93,6 @@ SYSTEM_TOOLS = [
                 "required": []
             }
         }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "find_process",
-            "description": "Procura processos pelo nome (ex: firefox, gamemode).",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "name_pattern": {
-                        "type": "string",
-                        "description": "Nome ou padrão do processo para buscar"
-                    }
-                },
-                "required": ["name_pattern"]
-            }
-        }
     }
 ]
 
@@ -284,24 +267,6 @@ def get_terminal_info() -> str:
         return f"erro: {str(e)}"
 
 
-def find_process(name_pattern: str) -> str:
-    """Procura processos pelo nome."""
-    try:
-        # pgrep -a retorna PID e linha de comando completa
-        result = subprocess.run(
-            ["pgrep", "-a", "-i", name_pattern],
-            capture_output=True, text=True
-        )
-        
-        if result.returncode == 0 and result.stdout.strip():
-            return f"processos encontrados para '{name_pattern}':\n```\n{result.stdout.strip()}\n```"
-        else:
-            return f"nenhum processo encontrado com o nome '{name_pattern}'."
-            
-    except Exception as e:
-        return f"erro ao buscar processo: {str(e)}"
-
-
 def execute_system_tool(tool_name: str, arguments: dict) -> str:
     """Executa uma ferramenta de sistema."""
     tools_map = {
@@ -309,9 +274,9 @@ def execute_system_tool(tool_name: str, arguments: dict) -> str:
         "get_memory_info": get_memory_info,
         "get_system_info": get_system_info,
         "list_processes": list_processes,
+        "list_processes": list_processes,
         "get_package_info": get_package_info,
         "get_terminal_info": get_terminal_info,
-        "find_process": find_process,
     }
     
     if tool_name not in tools_map:

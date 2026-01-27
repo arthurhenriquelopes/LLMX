@@ -11,7 +11,6 @@ Ferramentas:
 - list_processes(sort_by, limit): processos
 - get_package_info(package_name): info de pacote
 - get_terminal_info(): info do processo deste terminal (RAM/CPU)
-- find_process(name_pattern): verificar se processo esta rodando
 
 FORMATO DE RESPOSTA:
 

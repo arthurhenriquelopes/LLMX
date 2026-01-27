@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Name=LLMX
+GenericName=AI Linux Assistant
+Comment=Assistente Linux com IA usando Llama 3.3 70B
+Exec=x-terminal-emulator -e llmx
+Icon=utilities-terminal
+Terminal=false
+Categories=System;Utility;
+Keywords=ai;assistant;linux;terminal;llama;

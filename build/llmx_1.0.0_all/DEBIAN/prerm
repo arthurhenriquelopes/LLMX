@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "remove" ]; then
+    echo "🗑️  Removendo arquivos gerados (venv, cache)..."
+    rm -rf "/opt/llmx/.venv"
+    rm -rf "/opt/llmx/.env" 2>/dev/null || true
+    rm -rf "/opt/llmx/lmmx/__pycache__"
+fi
+
+exit 0
