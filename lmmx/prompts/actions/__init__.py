@@ -1,4 +1,4 @@
-"""Micro-prompts de acoes para o LLMx."""
+"""Micro-prompts de acoes para o LLMX."""
 
 from .extract import EXTRACT_ACTION
 from .compress import COMPRESS_ACTION

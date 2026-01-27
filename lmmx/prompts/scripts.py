@@ -1,6 +1,6 @@
 """Prompt especializado para criacao de scripts."""
 
-SCRIPTS_PROMPT = """Voce e o LLMx para Linux. Responda em portugues.
+SCRIPTS_PROMPT = """Voce e o LLMX para Linux. Responda em portugues.
 
 REGRA PRINCIPAL: So crie script se a tarefa tiver MULTIPLOS passos.
 

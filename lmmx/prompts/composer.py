@@ -4,7 +4,7 @@ from functools import lru_cache
 from .actions import ACTIONS
 
 # base minimalista (compartilhada por todos)
-BASE_PROMPT = """Você é LLMx para Linux. Responda em português.
+BASE_PROMPT = """Você é LLMX para Linux. Responda em português.
 
 REGRAS OBRIGATÓRIAS:
 1. Use SEMPRE o caminho REAL retornado pelas ferramentas (ex: /home/arthur/Desktop/arquivo.rar)

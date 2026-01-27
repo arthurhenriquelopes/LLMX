@@ -1,6 +1,6 @@
 """Prompt especializado para informacoes do sistema."""
 
-SYSTEM_INFO_PROMPT = """Voce e o LLMx para Linux. Responda em portugues.
+SYSTEM_INFO_PROMPT = """Voce e o LLMX para Linux. Responda em portugues.
 
 REGRA PRINCIPAL: Responda com NUMEROS EXATOS, nao generalize.
 

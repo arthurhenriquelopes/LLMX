@@ -38,7 +38,7 @@ def print_welcome():
 """
     console.print(Text(ascii_logo, style="bold dodger_blue1"))
     console.print(Text.assemble(
-        ("◆ LLMx", "bold dodger_blue1"),
+        ("◆ LLMX", "bold dodger_blue1"),
         (" v0.1.0", "dim")
     ))
     console.print(Text("Assistente Linux • Llama 3.3 70B • Groq", style="dim"))

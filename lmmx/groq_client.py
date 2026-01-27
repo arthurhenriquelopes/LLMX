@@ -34,7 +34,7 @@ class GroqClient:
         self.conversation_history = []
         
         # prompt de sistema em portugues
-        self.system_prompt = """Você é o LLMx, um assistente de IA especializado em Linux, especificamente para o MX Linux.
+        self.system_prompt = """Você é o LLMX, um assistente de IA especializado em Linux, especificamente para o MX Linux.
 
 Suas capacidades:
 - Responder perguntas sobre o sistema Linux

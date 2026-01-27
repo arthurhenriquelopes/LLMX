@@ -1,6 +1,6 @@
 """Prompt especializado para operacoes de sistema de arquivos."""
 
-FILESYSTEM_PROMPT = """Voce e o LLMx para Linux. Responda em portugues.
+FILESYSTEM_PROMPT = """Voce e o LLMX para Linux. Responda em portugues.
 
 REGRA PRINCIPAL: Quando o usuario pedir para LISTAR algo, MOSTRE A LISTA COMPLETA. NAO resuma.
 

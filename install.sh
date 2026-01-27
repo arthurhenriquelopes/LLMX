@@ -1,5 +1,5 @@
 #!/bin/bash
-# LLMx Installer - Instala dependências e adiciona ao menu de aplicativos
+# LLMX Installer - Instala dependências e adiciona ao menu de aplicativos
 
 set -e
 
@@ -12,7 +12,7 @@ NC='\033[0m' # No Color
 
 echo -e "${BLUE}"
 echo "╔═══════════════════════════════════════════╗"
-echo "║      🐧 LLMx Installer                    ║"
+echo "║      🐧 LLMX Installer                    ║"
 echo "║      Assistente Linux com IA              ║"
 echo "╚═══════════════════════════════════════════╝"
 echo -e "${NC}"
@@ -88,7 +88,7 @@ cat > "$DESKTOP_FILE" << EOF
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=LLMx
+Name=LLMX
 GenericName=AI Linux Assistant
 Comment=Assistente Linux com IA usando Llama 3.3 70B
 Exec=x-terminal-emulator -e "$LAUNCHER_SCRIPT"
@@ -110,8 +110,8 @@ echo -e "${GREEN}═════════════════════
 echo -e "${GREEN}✓ Instalação concluída com sucesso!${NC}"
 echo -e "${GREEN}═══════════════════════════════════════════${NC}"
 echo ""
-echo -e "Para executar o LLMx:"
-echo -e "  ${BLUE}1.${NC} Procure por 'LLMx' no menu de aplicativos"
+echo -e "Para executar o LLMX:"
+echo -e "  ${BLUE}1.${NC} Procure por 'LLMX' no menu de aplicativos"
 echo -e "  ${BLUE}2.${NC} Ou execute no terminal:"
 echo -e "     ${YELLOW}cd $PROJECT_DIR${NC}"
 echo -e "     ${YELLOW}source .venv/bin/activate${NC}"

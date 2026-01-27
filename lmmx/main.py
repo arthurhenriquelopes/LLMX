@@ -21,7 +21,7 @@ def print_help():
     """Mostra mensagem de ajuda."""
     help_text = """
 **Comandos:**
-  `/exit`     Sair do LLMx
+  `/exit`     Sair do LLMX
   `/clear`    Limpar histórico
   `/model`    Trocar modelo
   `/key`      Adicionar chave de API
