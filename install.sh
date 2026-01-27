@@ -86,7 +86,7 @@ mkdir -p "$HOME/.local/share/applications"
 
 cat > "$DESKTOP_FILE" << EOF
 [Desktop Entry]
-Version=1.0
+Version=1.0.0
 Type=Application
 Name=LLMX
 GenericName=AI Linux Assistant
