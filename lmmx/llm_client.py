@@ -1,4 +1,4 @@
-"""Cliente llm unificado para multiplos provedores (groq, openrouter)."""
+"""Cliente llm unificado para multiplos provedores (groq, manus)."""
 
 import os
 from groq import Groq
@@ -56,7 +56,7 @@ Você tem acesso a ferramentas para: listar diretórios, encontrar arquivos, ver
             # usa o cliente groq nativo
             self.client = Groq(api_key=api_key)
         else:
-            # para openrouter e outros provedores openai-compativeis
+            # para manus e outros provedores openai-compativeis
             base_url = provider_config.get("base_url")
             self.client = OpenAI(api_key=api_key, base_url=base_url)
         

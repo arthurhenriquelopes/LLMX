@@ -54,7 +54,7 @@ def handle_key_command():
     # mostra provedores disponiveis
     console.print(Text("Adicionar nova chave:", style="dim"))
     console.print(Text("  1. groq", style="white"))
-    console.print(Text("  2. openrouter", style="white"))
+    console.print(Text("  2. manus", style="white"))
     console.print(Text("  0. cancelar", style="white"))
     console.print()
     
@@ -67,7 +67,7 @@ def handle_key_command():
     elif choice == "1":
         provider = "groq"
     elif choice == "2":
-        provider = "openrouter"
+        provider = "manus"
     else:
         print_error("opção inválida")
         return

@@ -20,16 +20,13 @@ PROVIDERS = {
         "api_key_env": "GROQ_API_KEY",
         "base_url": None,  # usa default do groq
     },
-    "openrouter": {
-        "name": "OpenRouter",
+    "manus": {
+        "name": "Manus",
         "models": {
-            "xiaomi/mimo-v2-flash:free": "Xiaomi MiMo-V2 Flash",
-            "mistralai/devstral-2512:free": "Mistral Devstral 2",
-            "nvidia/nemotron-3-nano-30b-a3b:free": "Nvidia Nemotron 30B",
-            "liquid/lfm-2.5-1.2b-thinking:free": "Liquid LFM 2.5 Thinking",
+            "manus-1": "Manus 1",
         },
-        "api_key_env": "OPENROUTER_API_KEY",
-        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env": "MANUS_API_KEY",
+        "base_url": "https://api.manus.co/v1",
     }
 }
 

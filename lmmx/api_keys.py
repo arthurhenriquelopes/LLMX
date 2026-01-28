@@ -50,7 +50,7 @@ def save_api_key(provider: str, key: str) -> bool:
     Salva uma nova chave de api.
     
     args:
-        provider: nome do provedor (groq, openrouter)
+        provider: nome do provedor (groq, manus)
         key: chave de api
         
     returns:

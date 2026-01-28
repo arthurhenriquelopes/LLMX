@@ -7,6 +7,8 @@ from rich.text import Text
 from rich.spinner import Spinner
 from rich.live import Live
 from rich.theme import Theme
+from rich.panel import Panel
+from rich.padding import Padding
 
 # tema personalizado com cores melhores
 custom_theme = Theme({
@@ -49,26 +51,30 @@ def print_welcome():
 def print_user_prompt() -> str:
     """Obtem a entrada do usuario."""
     console.print()
-    console.print(Text("›", style="bold dodger_blue1"), end=" ")
-    return input()
+    return console.input(Text("  You > ", style="bold blue"))
 
 
 def print_assistant_response(response: str):
-    """Mostra a resposta do assistente com formatacao markdown."""
+    """Mostra a resposta do assistente com formatacao markdown em um painel."""
     console.print()
-    # cria console com markup habilitado apenas para markdown
-    md_console = Console(
-        theme=custom_theme,
-        force_terminal=True,
-        color_system="auto"
-    )
-    # markdown personalizado com negrito estilizado (branco brilhante para contraste)
+    
+    # markdown personalizado
     md = Markdown(
         response,
-        style="dim white",  # texto base e dim
+        style="white",
         code_theme="monokai",
     )
-    md_console.print(md)
+    
+    panel = Panel(
+        md,
+        title="[bold dodger_blue1]LLMX[/]",
+        title_align="left",
+        border_style="dim blue",
+        padding=(1, 2),
+        expand=False
+    )
+    
+    console.print(panel)
 
 
 def print_tool_call(tool_name: str, description: str = None):
