@@ -1,7 +1,9 @@
 
 <img width="362" height="170" alt="llmx" src="https://github.com/user-attachments/assets/090b0dd3-314d-4c88-8603-c1dd316da33f" />
 
-Assistente de terminal pra Linux usando LLMs. Rapido, pratico e com acesso real ao seu sistema.
+# LLMX
+
+Assistente de terminal pra Linux usando LLMs. Rápido, prático e com acesso real ao seu sistema.
 
 ## O que faz
 
@@ -9,76 +11,153 @@ Assistente de terminal pra Linux usando LLMs. Rapido, pratico e com acesso real 
 - Encontra e manipula arquivos
 - Executa comandos user e sudo
 - Cria scripts de automação
-- Funciona com Groq e OpenRouter*
+- Interface com input box estilo Gemini CLI
 
 ## Requisitos
 
 - **Sistema**: Linux (Debian-based recomendado)
-- **Python**: 3.10 ou superior
-- **Pacotes**: `python3-venv`
+- **Node.js**: v20.0.0 ou superior
+- **npm**: Incluído com Node.js
 
 ## Instalação
 
-```bash
-curl -fsSL https://github.com/arthurhenriquelopes/LLMX/releases/latest/download/llmx_latest_all.deb -o llmx.deb && sudo dpkg -i llmx.deb && rm llmx.deb
-```
+### Opção 1: Script automático (recomendado)
 
-Ou, alternativamente:
+```bash
+git clone https://github.com/arthurhenriquelopes/LLMX.git
+### 1. Obter API key
+
+**Groq (recomendado - grátis):**
+- Acesse [console.groq.com](https://console.groq.com)
+- Crie uma conta e gere uma API key
+
+**Manus (opcional - modelos grátis):**
+- Obtenha sua chave em [manus.nz](https://manus.nz)
+- Modelos disponíveis: `gpt-4o-mini`, `claude-3-5-sonnet`, `gemini-2.0-flash-exp`
+
+**Google AI Studio (opcional - grátis):**
+- Obtenha sua chave em [aistudio.google.com](https://aistudio.google.com)
+- Modelos disponíveis: `gemini-2.0-flash-exp`, `gemini-1.5-flash`, `gemini-1.5-pro`
+
+### 2. Clonar e instalar
 
 ```bash
 git clone https://github.com/arthurhenriquelopes/LLMX.git
 cd LLMX
-chmod +x install.sh
+cp .env.example .env
+# Edite .env e adicione suas API keys
+```
+
+### 3. Instalar globalmente
+
+```bash
 ./install.sh
 ```
 
-O script de instalação cria um atalho no menu de aplicativos automaticamente.
-
-## Configuração
-
-Você precisa de uma API key. Rode o programa e use `/key` pra adicionar sua propria key. Suas keys podem ser verificadas em `~/.llmx/api_keys.txt`.
+Agora é só rodar `llmx` de qualquer lugar!
 
 ## Uso
 
+Após instalação, use de **qualquer pasta**:
+
 ```bash
-python -m lmmx
+llmx
 ```
 
-<p>
-  <img width="49%" src="https://github.com/user-attachments/assets/b91e5395-8fdd-4759-aeb4-1a193c8dcfb3" />
-  <img width="49%" src="https://github.com/user-attachments/assets/3185c6ca-620d-4b8b-8bd9-a723387bf322" />
-</p>
+Você verá:
+
+```
+      ___       ___       ___           __      
+     /  /\     /  /\     /  /\         |  |\    
+    /  /:/    /  /:/    /  /::|        |  |:|   
+   /  /:/    /  /:/    /  /:|:|        |  |:|   
+  /  /:/    /  /:/    /  /:/|:|__      |__|:|__ 
+ /__/:/    /__/:/    /__/:/_|:::::\ ____/__/::::\
+ \  \:\    \  \:\    \__\/  /~~/:/ \__\::::/~~~~
+  \  \:\    \  \:\         /  /:/     |~~|:|    
+   \  \:\    \  \:\       /  /:/      |  |:|    
+    \  \:\    \  \:\     /__/:/       |__|:|    
+     \__\/     \__\/     \__\/         \__\|    
+
+◆ LLMX v1.0.0
+Assistente Linux • Llama 3.3 70B • Groq
+/help para comandos • /exit para sair
+
+✓ conectado (llama-3.3-70b-versatile)
+╭──────────────────────────────────────────────────────────────╮
+│ > Type your message or @path/to/file                         │
+╰──────────────────────────────────────────────────────────────╯
+```
 
 ## Comandos
 
-`/model` - trocar modelo
-`/key` - adicionar chave de API
-`/keys` - ver chaves salvas
-`/clear` - limpar histórico
-`/exit` - sair
+- `/help` - listar comandos
+- `/model` - trocar modelo
+- `/clear` - limpar histórico
+- `/exit` - sair
 
 ## Modelos disponíveis
 
-**Groq** (rápido)
-- llama-3.3-70b-versatile
-- llama-3.1-8b-instant
+**Groq** (rápido e gratuito):
+- llama-3.3-70b-versatile (padrão)
+- llama-3.1-70b-versatile
 - mixtral-8x7b-32768
 
-**OpenRouter** (mais opções)
-- mistralai/devstral-2512:free
-- e outros
-
-## Estrutura
+## Estrutura do Projeto (TypeScript)
 
 ```
-lmmx/
-├── agent.py          # loop principal
-├── llm_client.py     # cliente pra APIs
-├── tools/            # ferramentas do sistema
-└── prompts/          # prompts especializados
-    └── actions/      # micro-prompts por ação
+LLMX/
+├── src/
+│   ├── index.tsx           # Entry point
+│   ├── api/
+│   │   └── groq.ts        # Groq API client
+│   ├── config/
+│   │   └── models.ts      # Model definitions
+│   └── ui/
+│       ├── App.tsx        # Main component
+│       └── components/
+│           └── SimpleInput.tsx  # Input box
+├── bin/
+│   └── llmx.js            # Global CLI wrapper
+├── dist/                  # Compiled output
+├── package.json
+└── tsconfig.json
 ```
+
+## Desenvolvimento
+
+```bash
+# Watch mode (recarrega ao salvar)
+npm run dev
+
+# Build manual
+npm run build
+
+# Type checking
+npm run typecheck
+```
+
+## Tecnologias
+
+- **TypeScript** - Type safety
+- **Ink** - React para CLIs (UI components)
+- **Groq SDK** - API client oficial
+- **esbuild** - Bundling rápido
+
+## Migração Python → TypeScript
+
+A versão antiga em Python ainda está disponível no branch `python-legacy`. A nova versão TypeScript oferece:
+
+- ✅ UI melhor com bordas e cores
+- ✅ Resize de terminal sem artifacts
+- ✅ Componentes reutilizáveis (React)
+- ✅ Type safety
+- ✅ Build otimizado (1.9MB bundle)
 
 ## Licença
 
 MIT
+
+---
+
+**Nota**: Este projeto foi inspirado pelo [Gemini CLI](https://github.com/google-gemini/gemini-cli).

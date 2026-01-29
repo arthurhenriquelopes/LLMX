@@ -1,2 +1,27 @@
+# node
+node_modules/
+dist/
+*.log
 
+# env
 .env
+.env.local
+
+# python (legacy)
+.venv/
+__pycache__/
+*.pyc
+
+# build artifacts
+build/
+*.deb
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# os
+.DS_Store
+Thumbs.db
