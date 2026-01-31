@@ -17,9 +17,12 @@ export const useFocus = () => {
     useEffect(() => {
         const handleData = (data: Buffer) => {
             const sequence = data.toString();
-            if (sequence.includes(FOCUS_IN)) {
+            const lastFocusIn = sequence.lastIndexOf(FOCUS_IN);
+            const lastFocusOut = sequence.lastIndexOf(FOCUS_OUT);
+
+            if (lastFocusIn > lastFocusOut) {
                 setIsFocused(true);
-            } else if (sequence.includes(FOCUS_OUT)) {
+            } else if (lastFocusOut > lastFocusIn) {
                 setIsFocused(false);
             }
         };

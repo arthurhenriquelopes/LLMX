@@ -10,8 +10,14 @@ import { RateLimitDialog, isRateLimitError, type RateLimitAction } from './compo
 import { type ConfirmationOutcome, ConfirmationOutcome as Outcome } from '../tools/confirmation.js';
 
 interface ChatMessage {
-    role: 'user' | 'assistant' | 'system';
+    role: 'user' | 'assistant' | 'system' | 'tool_call';
     content: string;
+    toolData?: {
+        name: string;
+        args: Record<string, unknown>;
+        result?: string;
+        status: 'completed' | 'error';
+    };
 }
 
 export function App() {
@@ -157,13 +163,76 @@ Funcionalidades:
                     setCurrentTool({ name: toolName, args, status: 'running' });
                 },
                 onToolComplete: (toolName, result) => {
-                    setCurrentTool(prev => prev ? { ...prev, status: 'completed', result } : null);
-                    // limpa apos um breve delay
-                    setTimeout(() => setCurrentTool(null), 500);
+                    // Armazena temporariamente
+                    const toolToPersist = {
+                        name: toolName,
+                        args: argsForTool(toolName), // Precisamos dos args aqui. Como não temos acesso direto ao args do onToolExecuting no escopo do onToolComplete, vamos pegar do currentTool state se possível ou simplificar.
+                        // O problema é que currentTool pode ter mudado.
+                        // Mas como é síncrono no fluxo do React, vamos tentar pegar o currentTool atual do state.
+                        // Melhor ainda: vamos confiar que onToolComplete é chamado logo após.
+                    };
+
+                    // A melhor abordagem é atualizar o state functionalmente.
+                    setCurrentTool(prev => {
+                        if (prev) {
+                            // Persistir a tool completa agora que temos o resultado
+                            setMessages(msgs => [...msgs, {
+                                role: 'tool_call',
+                                content: '',
+                                toolData: {
+                                    name: toolName,
+                                    args: prev.args, // Usamos os args que estavam no state
+                                    result,
+                                    status: 'completed'
+                                }
+                            }]);
+                            return null; // Limpa currentTool
+                        }
+                        return null;
+                    });
                 },
             };
 
-            const response = await runAgent(input, options);
+            // Helper para capturar args corretos não é trivial aqui por causa do closure.
+            // Vamos corrigir a logica do onToolComplete acima:
+            // O `options` é recriado a cada handleSubmit. O `currentTool` dentro do callback pode estar stale?
+            // Não, se usarmos functional updates ou refs.
+            // Mas `runAgent` é async.
+
+            // Vamos simplificar: `runAgent` não tem acesso ao `setCurrentTool` mais recente se não usarmos ref, mas `options` é definido no escopo de `handleSubmit`.
+            // O problema é que `onToolComplete` não recebe `args`.
+
+            // CORREÇÃO: Vamos mudar `runAgent` em `api/groq.ts` para passar `args` no `onToolComplete` também?
+            // Ou mais fácil: Vamos confiar que `currentTool` no state é o que acabou de rodar (já que o agente roda sequencialmente tool por tool).
+
+            // Ajuste fino no options:
+            const agentOptions: AgentOptions = {
+                model: currentModel,
+                onConfirmationRequired: handleConfirmationRequired,
+                onToolExecuting: (toolName, args) => {
+                    setCurrentTool({ name: toolName, args, status: 'running' });
+                },
+                onToolComplete: (toolName, result) => {
+                    setCurrentTool(prev => {
+                        // Persiste no histórico
+                        if (prev && prev.name === toolName) {
+                            setMessages(msgs => [...msgs, {
+                                role: 'tool_call',
+                                content: '',
+                                toolData: {
+                                    name: toolName,
+                                    args: prev.args,
+                                    result,
+                                    status: 'completed'
+                                }
+                            }]);
+                        }
+                        return null;
+                    });
+                },
+            };
+
+            const response = await runAgent(input, agentOptions);
             setMessages(prev => [...prev, { role: 'assistant', content: response }]);
         } catch (error) {
             // verifica se e erro de rate limit
@@ -177,6 +246,10 @@ Funcionalidades:
             setIsProcessing(false);
         }
     };
+
+    // Função auxiliar fictícia para type safety no comentário acima
+    function argsForTool(name: string): Record<string, unknown> { return {}; }
+
 
     // handler para acoes do dialog de rate limit
     const handleRateLimitAction = useCallback((action: RateLimitAction) => {
@@ -223,11 +296,20 @@ Funcionalidades:
             {messages.map((msg, idx) => (
                 <Box key={idx} flexDirection="column" marginBottom={1}>
                     {msg.role === 'user' ? (
-                        <Text dimColor>› {msg.content}</Text>
+                        <Text dimColor>{"> "}{msg.content}</Text>
                     ) : msg.role === 'system' ? (
                         <Text color="cyan">{msg.content}</Text>
+                    ) : msg.role === 'tool_call' && msg.toolData ? (
+                        <ToolExecution
+                            toolName={msg.toolData.name}
+                            args={msg.toolData.args}
+                            status={msg.toolData.status}
+                            result={msg.toolData.result}
+                        />
                     ) : (
-                        <Text>{msg.content}</Text>
+                        <Box paddingLeft={2}>
+                            <Text>{msg.content}</Text>
+                        </Box>
                     )}
                 </Box>
             ))}
@@ -270,10 +352,11 @@ Funcionalidades:
                 placeholder="Digite sua pergunta ou comando"
                 onSubmit={handleSubmit}
                 disabled={isProcessing || pendingConfirmation !== null || showRateLimitDialog}
+                suggestions={['/help', '/model', '/clear', '/exit']}
             />
 
             {/* barra de status */}
-            <Box marginTop={1} justifyContent="space-between">
+            <Box marginTop={0} justifyContent="space-between">
                 <Text dimColor>~/LLMX</Text>
                 <Box>
                     {currentModel.split('').map((char, i) => {

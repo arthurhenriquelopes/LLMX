@@ -15,7 +15,7 @@ interface CommandBoxProps {
  * exibe um comando com borda branca e spinner (estilo Gemini CLI)
  */
 export function CommandBox({ command, status, result, compact = false }: CommandBoxProps) {
-    const borderColor = status === 'error' ? 'red' : status === 'completed' ? 'green' : 'white';
+    const borderColor = status === 'error' ? 'red' : 'gray';
 
     return (
         <Box
@@ -28,7 +28,6 @@ export function CommandBox({ command, status, result, compact = false }: Command
             {/* header com comando */}
             <Box>
                 {status === 'running' && <Spinner color="cyan" />}
-                {status === 'completed' && <Text color="green">✓</Text>}
                 {status === 'error' && <Text color="red">✗</Text>}
                 <Text color="gray"> $ </Text>
                 <Text color="white" bold>{command}</Text>
@@ -73,7 +72,7 @@ interface ToolExecutionProps {
  * exibe execucao de ferramenta com borda branca
  */
 export function ToolExecution({ toolName, args, status, result }: ToolExecutionProps) {
-    const borderColor = status === 'error' ? 'red' : status === 'completed' ? 'green' : 'white';
+    const borderColor = status === 'error' ? 'red' : 'gray';
 
     // formata argumentos de forma legivel
     const formatArgs = (args: Record<string, unknown> | undefined): string => {
@@ -109,9 +108,8 @@ export function ToolExecution({ toolName, args, status, result }: ToolExecutionP
             {/* header com ferramenta */}
             <Box>
                 {status === 'running' && <Spinner color="cyan" />}
-                {status === 'completed' && <Text color="green">✓</Text>}
                 {status === 'error' && <Text color="red">✗</Text>}
-                <Text color="cyan" bold> {toolName}</Text>
+                <Text color="#00266b" bold> {toolName}</Text>
                 {args && (
                     <Text dimColor> ({formatArgs(args)})</Text>
                 )}

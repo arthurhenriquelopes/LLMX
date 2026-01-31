@@ -1,0 +1,578 @@
+
+> llmx@2.0.0 typecheck
+> tsc --noEmit
+
+src/api/groq.ts(164,42): error TS2304: Cannot find name 'getPromptForRequest'.
+src/ui/components/InputPrompt.tsx(8,24): error TS2307: Cannot find module 'clipboardy' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(11,47): error TS2307: Cannot find module './SuggestionsDisplay.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(12,23): error TS2307: Cannot find module '../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(13,33): error TS2307: Cannot find module '../hooks/useInputHistory.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(26,8): error TS2307: Cannot find module '../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(29,33): error TS2307: Cannot find module '../hooks/useShellHistory.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(30,44): error TS2307: Cannot find module '../hooks/useReverseSearchCompletion.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(34,8): error TS2307: Cannot find module '../hooks/useCommandCompletion.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(35,26): error TS2307: Cannot find module '../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(36,29): error TS2307: Cannot find module '../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(37,38): error TS2307: Cannot find module '../keyMatchers.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(38,51): error TS2307: Cannot find module '../commands/types.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(39,29): error TS2307: Cannot find module '@google/gemini-cli-core' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(40,55): error TS2307: Cannot find module '@google/gemini-cli-core' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(44,8): error TS2307: Cannot find module '../utils/highlight.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(45,42): error TS2307: Cannot find module '../hooks/useKittyKeyboardProtocol.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(50,8): error TS2307: Cannot find module '../utils/clipboardUtils.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(54,8): error TS2307: Cannot find module '../utils/commandUtils.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(56,43): error TS2307: Cannot find module '../textConstants.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(57,44): error TS2307: Cannot find module '../constants.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(58,43): error TS2307: Cannot find module '../themes/color-utils.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(59,33): error TS2307: Cannot find module '../utils/terminalUtils.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(60,36): error TS2307: Cannot find module '../contexts/ShellFocusContext.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(61,28): error TS2307: Cannot find module '../contexts/UIStateContext.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(62,29): error TS2307: Cannot find module '../contexts/SettingsContext.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(63,32): error TS2307: Cannot find module '../types.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(64,31): error TS2307: Cannot find module '../hooks/useMouseClick.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(65,43): error TS2307: Cannot find module '../contexts/MouseContext.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(66,30): error TS2307: Cannot find module '../contexts/UIActionsContext.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(67,36): error TS2307: Cannot find module '../hooks/useAlternateBuffer.js' or its corresponding type declarations.
+src/ui/components/InputPrompt.tsx(396,6): error TS7006: Parameter '_event' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(396,14): error TS7006: Parameter 'relX' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(396,20): error TS7006: Parameter 'relY' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(411,6): error TS7006: Parameter '_event' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(411,14): error TS7006: Parameter 'relX' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(411,20): error TS7006: Parameter 'relY' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(1149,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1150,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1180,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1193,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1202,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1213,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1219,18): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1229,16): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1236,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1239,18): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1240,19): error TS2322: Type '{ children: (string | Element)[]; terminalCursorFocus: any; terminalCursorPosition: number; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'terminalCursorFocus' does not exist on type 'IntrinsicAttributes & Props'.
+src/ui/components/InputPrompt.tsx(1244,20): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1249,18): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1288,37): error TS7006: Parameter 'seg' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(1288,42): error TS7006: Parameter 'segIdx' implicitly has an 'any' type.
+src/ui/components/InputPrompt.tsx(1335,24): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1348,26): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1362,22): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1363,24): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1364,25): error TS2322: Type '{ children: (string | false | Element | ReactNode[])[]; terminalCursorFocus: any; terminalCursorPosition: any; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'terminalCursorFocus' does not exist on type 'IntrinsicAttributes & Props'.
+src/ui/components/InputPrompt.tsx(1374,28): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1389,24): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/InputPrompt.tsx(1404,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/SimpleInput.tsx(30,108): error TS2339: Property 'home' does not exist on type 'Key'.
+src/ui/components/SimpleInput.tsx(30,121): error TS2339: Property 'end' does not exist on type 'Key'.
+src/ui/components/SimpleInput.tsx(48,17): error TS2339: Property 'home' does not exist on type 'Key'.
+src/ui/components/SimpleInput.tsx(54,17): error TS2339: Property 'end' does not exist on type 'Key'.
+src/ui/components/shared/BaseSelectionList.test.tsx(8,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.test.tsx(9,25): error TS2307: Cannot find module '../../../test-utils/async.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.test.tsx(15,34): error TS2307: Cannot find module '../../hooks/useSelectionList.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.test.tsx(17,28): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.test.tsx(63,13): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSelectionList.test.tsx(77,33): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSelectionList.test.tsx(286,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSelectionList.test.tsx(291,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSelectionList.test.tsx(301,19): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSelectionList.tsx(10,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.tsx(11,34): error TS2307: Cannot find module '../../hooks/useSelectionList.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.tsx(13,40): error TS2307: Cannot find module '../../hooks/useSelectionList.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSelectionList.tsx(101,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(104,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(140,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(142,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(143,16): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(153,16): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(159,18): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(164,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSelectionList.tsx(176,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(7,24): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(8,25): error TS2307: Cannot find module '../../../test-utils/async.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(17,34): error TS2307: Cannot find module '../../contexts/KeypressContext.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(18,30): error TS2307: Cannot find module '../../../config/settings.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(119,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(120,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(170,25): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(299,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(300,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(351,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.test.tsx(352,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/BaseSettingsDialog.tsx(10,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(11,43): error TS2307: Cannot find module '../../../config/settings.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(12,31): error TS2307: Cannot find module '../../../utils/dialogScopeUtils.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(21,8): error TS2307: Cannot find module '../../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(22,39): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(23,38): error TS2307: Cannot find module '../../keyMatchers.js' or its corresponding type declarations.
+src/ui/components/shared/BaseSettingsDialog.tsx(192,43): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/ui/components/shared/BaseSettingsDialog.tsx(562,27): error TS2322: Type '{ children: string; color: any; terminalCursorFocus: boolean; terminalCursorPosition: any; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'terminalCursorFocus' does not exist on type 'IntrinsicAttributes & Props'.
+src/ui/components/shared/BaseSettingsDialog.tsx(598,18): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(8,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(21,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(46,7): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'DescriptiveRadioSelectItem<string>'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(52,7): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'DescriptiveRadioSelectItem<string>'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(58,7): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'DescriptiveRadioSelectItem<string>'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.test.tsx(73,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(9,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(11,40): error TS2307: Cannot find module '../../hooks/useSelectionList.js' or its corresponding type declarations.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(53,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(63,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(63,47): error TS2339: Property 'key' does not exist on type 'DescriptiveRadioSelectItem<T>'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(64,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/DescriptiveRadioButtonSelect.tsx(66,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/DialogFooter.tsx(9,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/DialogFooter.tsx(36,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/DialogFooter.tsx(37,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.test.tsx(7,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/EnumSelector.test.tsx(9,40): error TS2307: Cannot find module '../../../config/settingsSchema.js' or its corresponding type declarations.
+src/ui/components/shared/EnumSelector.test.tsx(28,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(40,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(52,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(67,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(79,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(91,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(104,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(114,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(126,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.test.tsx(142,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/EnumSelector.tsx(10,24): error TS2307: Cannot find module '../../colors.js' or its corresponding type declarations.
+src/ui/components/shared/EnumSelector.tsx(11,40): error TS2307: Cannot find module '../../../config/settingsSchema.js' or its corresponding type declarations.
+src/ui/components/shared/EnumSelector.tsx(51,13): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(63,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(64,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(69,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(70,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(76,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/EnumSelector.tsx(77,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/ExpandableText.test.tsx(8,24): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/ExpandableText.test.tsx(17,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(32,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(50,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(69,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(89,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(114,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.test.tsx(136,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ExpandableText.tsx(9,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(7,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(11,26): error TS2307: Cannot find module '../../utils/terminalUtils.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(22,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(23,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(37,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(38,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(50,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.test.tsx(55,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/HalfLinePaddedBox.tsx(10,28): error TS2307: Cannot find module '../../contexts/UIStateContext.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.tsx(15,8): error TS2307: Cannot find module '../../themes/color-utils.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.tsx(16,43): error TS2307: Cannot find module '../../utils/terminalUtils.js' or its corresponding type declarations.
+src/ui/components/shared/HalfLinePaddedBox.tsx(46,11): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(84,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(91,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(92,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(94,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(98,11): error TS2322: Type '{ children: ReactNode; width: any; flexDirection: "column"; alignItems: "stretch"; backgroundColor: any; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'backgroundColor' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(102,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(103,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(110,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(116,7): error TS2322: Type '{ children: (Element | ReactNode)[]; width: any; flexDirection: "column"; alignItems: "stretch"; minHeight: number; flexShrink: number; backgroundColor: any; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'backgroundColor' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(118,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(119,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(124,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/HalfLinePaddedBox.tsx(125,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.test.tsx(7,24): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/MaxSizedBox.test.tsx(8,25): error TS2307: Cannot find module '../../../test-utils/async.js' or its corresponding type declarations.
+src/ui/components/shared/MaxSizedBox.test.tsx(9,34): error TS2307: Cannot find module '../../contexts/OverflowContext.js' or its corresponding type declarations.
+src/ui/components/shared/MaxSizedBox.test.tsx(17,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(18,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(19,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(20,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(32,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(33,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(34,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(35,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(36,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(37,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(51,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(52,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(53,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(54,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(55,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(56,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(70,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(71,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(72,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(73,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(74,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(75,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(89,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(90,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(91,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(92,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(106,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(107,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(108,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(109,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(110,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(111,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(125,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(126,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(127,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(128,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(141,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(142,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(143,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(144,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(145,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(157,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(158,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(169,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(170,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(171,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(172,13): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(173,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(174,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(176,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(192,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(193,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(194,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(195,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(214,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(215,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(216,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.test.tsx(217,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/MaxSizedBox.tsx(9,21): error TS2305: Module '"ink"' has no exported member 'ResizeObserver'.
+src/ui/components/shared/MaxSizedBox.tsx(10,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/MaxSizedBox.tsx(11,36): error TS2307: Cannot find module '../../contexts/OverflowContext.js' or its corresponding type declarations.
+src/ui/components/shared/MaxSizedBox.tsx(52,46): error TS7006: Parameter 'entries' implicitly has an 'any' type.
+src/ui/components/shared/MaxSizedBox.tsx(101,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.tsx(111,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.tsx(114,7): error TS2322: Type '{ children: (false | Element)[]; flexDirection: "column"; width: number | undefined; maxHeight: number; flexShrink: number; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'maxHeight' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'. Did you mean 'height'?
+src/ui/components/shared/MaxSizedBox.tsx(118,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.tsx(123,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.tsx(124,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/MaxSizedBox.tsx(134,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(8,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/RadioButtonSelect.test.tsx(65,26): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'RadioSelectItem<string>'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(66,26): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'RadioSelectItem<string>'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(67,26): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'RadioSelectItem<string>'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(78,33): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(155,9): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'RadioSelectItem<string>'.
+src/ui/components/shared/RadioButtonSelect.test.tsx(188,9): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'RadioSelectItem<string>'.
+src/ui/components/shared/RadioButtonSelect.tsx(9,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/RadioButtonSelect.tsx(14,40): error TS2307: Cannot find module '../../hooks/useSelectionList.js' or its corresponding type declarations.
+src/ui/components/shared/RadioButtonSelect.tsx(75,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/RadioButtonSelect.tsx(91,16): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/RadioButtonSelect.tsx(91,66): error TS2339: Property 'key' does not exist on type 'RadioSelectItem<T>'.
+src/ui/components/shared/RadioButtonSelect.tsx(93,18): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/RadioButtonSelect.tsx(101,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/ScopeSelector.tsx(9,43): error TS2307: Cannot find module '../../../config/settings.js' or its corresponding type declarations.
+src/ui/components/shared/ScopeSelector.tsx(10,31): error TS2307: Cannot find module '../../../utils/dialogScopeUtils.js' or its corresponding type declarations.
+src/ui/components/shared/ScopeSelector.tsx(30,43): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/ui/components/shared/ScopeSelector.tsx(36,6): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/ui/components/shared/ScopeSelector.tsx(41,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/ScopeSelector.tsx(42,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/ScopeSelector.tsx(45,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/Scrollable.test.tsx(7,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.test.tsx(11,39): error TS2307: Cannot find module '../../contexts/ScrollProvider.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.test.tsx(42,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(43,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(51,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(52,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(53,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(54,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(64,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(65,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(66,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(67,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(76,8): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+src/ui/components/shared/Scrollable.test.tsx(76,15): error TS7006: Parameter 'isActive' implicitly has an 'any' type.
+src/ui/components/shared/Scrollable.test.tsx(84,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(85,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(86,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(87,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(88,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(89,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(90,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(91,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(92,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(93,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.test.tsx(94,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/Scrollable.tsx(15,15): error TS2305: Module '"ink"' has no exported member 'getInnerHeight'.
+src/ui/components/shared/Scrollable.tsx(15,31): error TS2305: Module '"ink"' has no exported member 'getScrollHeight'.
+src/ui/components/shared/Scrollable.tsx(16,39): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.tsx(17,31): error TS2307: Cannot find module '../../contexts/ScrollProvider.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.tsx(18,38): error TS2307: Cannot find module '../../hooks/useAnimatedScrollbar.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.tsx(19,34): error TS2307: Cannot find module '../../hooks/useBatchedScroll.js' or its corresponding type declarations.
+src/ui/components/shared/Scrollable.tsx(149,7): error TS2322: Type '"scroll"' is not assignable to type '"hidden" | "visible" | undefined'.
+src/ui/components/shared/ScrollableList.test.tsx(8,24): error TS2307: Cannot find module 'ink-testing-library' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.test.tsx(11,32): error TS2307: Cannot find module '../../contexts/ScrollProvider.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.test.tsx(12,34): error TS2307: Cannot find module '../../contexts/KeypressContext.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.test.tsx(13,31): error TS2307: Cannot find module '../../contexts/MouseContext.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.test.tsx(15,25): error TS2307: Cannot find module '../../../test-utils/async.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.test.tsx(82,6): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(83,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(84,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(85,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(86,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(87,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(91,20): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(92,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(93,23): error TS2322: Type '{ children: Element; sticky: true; flexDirection: "column"; width: number; opaque: true; stickyChildren: Element; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'sticky' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+src/ui/components/shared/ScrollableList.test.tsx(98,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(98,64): error TS2322: Type '{ children: Element[]; flexDirection: "column"; width: number; opaque: true; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'opaque' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+src/ui/components/shared/ScrollableList.test.tsx(99,28): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(100,28): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(111,24): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(113,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(122,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(137,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(205,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(206,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(207,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(208,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(209,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(213,22): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(215,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(216,27): error TS2322: Type '{ children: Element; sticky: true; stickyChildren: Element; }' is not assignable to type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+  Property 'sticky' does not exist on type 'IntrinsicAttributes & { readonly position?: "absolute" | "relative" | undefined; readonly columnGap?: number | undefined; readonly rowGap?: number | undefined; ... 45 more ...; readonly overflowY?: "hidden" | ... 1 more ... | undefined; } & { ...; } & RefAttributes<...>'.
+src/ui/components/shared/ScrollableList.test.tsx(217,44): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(219,28): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(222,26): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(224,24): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(225,24): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(241,30): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(298,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(299,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(300,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(301,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(302,20): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(307,48): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(385,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(386,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(387,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(388,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(389,20): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.test.tsx(391,48): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/ScrollableList.tsx(21,31): error TS2307: Cannot find module '../../contexts/ScrollProvider.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.tsx(23,38): error TS2307: Cannot find module '../../hooks/useAnimatedScrollbar.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.tsx(24,39): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.tsx(25,38): error TS2307: Cannot find module '../../keyMatchers.js' or its corresponding type declarations.
+src/ui/components/shared/ScrollableList.tsx(235,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/ScrollableList.tsx(242,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TabHeader.test.tsx(8,37): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/TabHeader.test.tsx(21,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(31,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(42,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(55,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(65,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(77,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(87,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(97,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(118,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(132,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(142,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.test.tsx(157,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TabHeader.tsx(9,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.test.tsx(7,24): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.test.tsx(10,29): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.test.tsx(116,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(136,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(148,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(175,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(202,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(223,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(242,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(261,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(282,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(290,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.test.tsx(305,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/TextInput.tsx(9,26): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.tsx(11,29): error TS2307: Cannot find module '../../hooks/useKeypress.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.tsx(13,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.tsx(15,42): error TS2307: Cannot find module '../../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/shared/TextInput.tsx(65,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(67,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(67,17): error TS2322: Type '{ children: (string | Element)[]; terminalCursorFocus: true; terminalCursorPosition: number; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'terminalCursorFocus' does not exist on type 'IntrinsicAttributes & Props'.
+src/ui/components/shared/TextInput.tsx(69,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(72,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(79,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(98,12): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(99,14): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/TextInput.tsx(100,15): error TS2322: Type '{ children: string; terminalCursorFocus: boolean; terminalCursorPosition: any; }' is not assignable to type 'IntrinsicAttributes & Props'.
+  Property 'terminalCursorFocus' does not exist on type 'IntrinsicAttributes & Props'.
+src/ui/components/shared/VirtualizedList.test.tsx(7,24): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/VirtualizedList.test.tsx(35,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(36,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(57,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(58,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(84,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(85,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(103,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(104,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(126,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(127,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(169,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(170,16): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(181,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(182,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(185,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(227,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(228,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(236,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(237,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(238,14): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(241,18): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(248,12): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(263,35): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(289,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(290,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(296,8): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.test.tsx(297,10): error TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+src/ui/components/shared/VirtualizedList.tsx(18,23): error TS2307: Cannot find module '../../semantic-colors.js' or its corresponding type declarations.
+src/ui/components/shared/VirtualizedList.tsx(19,34): error TS2307: Cannot find module '../../hooks/useBatchedScroll.js' or its corresponding type declarations.
+src/ui/components/shared/VirtualizedList.tsx(354,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/VirtualizedList.tsx(475,6): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/VirtualizedList.tsx(477,7): error TS2322: Type '"scroll"' is not assignable to type '"hidden" | "visible" | undefined'.
+src/ui/components/shared/VirtualizedList.tsx(486,8): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/VirtualizedList.tsx(487,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/VirtualizedList.tsx(489,10): error TS1361: 'React' cannot be used as a value because it was imported using 'import type'.
+src/ui/components/shared/performance.test.ts(8,28): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/performance.test.ts(10,43): error TS2307: Cannot find module '../../utils/highlight.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.test.ts(13,8): error TS2307: Cannot find module '../../../test-utils/render.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.test.ts(36,23): error TS2307: Cannot find module '../../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.test.ts(86,19): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(97,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(111,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(121,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(130,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(197,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(211,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(232,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(251,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(270,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(289,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(303,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(317,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(347,32): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(362,32): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(369,30): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(377,30): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(394,21): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(675,26): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBuffer>'.
+src/ui/components/shared/text-buffer.test.ts(2509,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(2526,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(2543,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(2560,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(2578,27): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(2592,26): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/text-buffer.test.ts(3032,12): error TS7031: Binding element 'vp' implicitly has an 'any' type.
+src/ui/components/shared/text-buffer.ts(13,26): error TS2307: Cannot find module 'mnemonist' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(22,8): error TS2307: Cannot find module '@google/gemini-cli-core' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(29,8): error TS2307: Cannot find module '../../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(30,34): error TS2307: Cannot find module '../../utils/clipboardUtils.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(31,26): error TS2307: Cannot find module '../../contexts/KeypressContext.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(32,38): error TS2307: Cannot find module '../../keyMatchers.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(35,45): error TS2307: Cannot find module '../../constants.js' or its corresponding type declarations.
+src/ui/components/shared/text-buffer.ts(1116,43): error TS7031: Binding element 'relVisualIdx' implicitly has an 'any' type.
+src/ui/components/shared/text-buffer.ts(1116,57): error TS7031: Binding element 'logCol' implicitly has an 'any' type.
+src/ui/components/shared/text-buffer.ts(1122,45): error TS7031: Binding element 'logCol' implicitly has an 'any' type.
+src/ui/components/shared/vim-buffer-actions.test.ts(52,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(65,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(77,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(90,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(104,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(113,23): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(128,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(140,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(152,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(167,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(172,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(183,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(193,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(202,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(217,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(230,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(244,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(256,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(268,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(281,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(296,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(308,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(322,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(334,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(346,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(360,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(369,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(384,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(392,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(405,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(413,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(424,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(433,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(442,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(451,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(461,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(474,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(487,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(503,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(516,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(529,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(542,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(557,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(570,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(583,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(598,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(611,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(626,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(640,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(654,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(667,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(677,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(690,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(702,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(711,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(722,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(733,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(742,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(753,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(766,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(779,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(788,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(804,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(819,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(834,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(847,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(860,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(879,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(889,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(901,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(925,22): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(940,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(948,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(962,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(970,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(983,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(991,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1002,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1010,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1021,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1029,24): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1041,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1048,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1056,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1063,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1070,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1082,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1096,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1114,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.test.ts(1129,25): error TS2339: Property 'toHaveOnlyValidCharacters' does not exist on type 'Assertion<TextBufferState>'.
+src/ui/components/shared/vim-buffer-actions.ts(21,37): error TS2307: Cannot find module '../../utils/textUtils.js' or its corresponding type declarations.
+src/ui/components/shared/vim-buffer-actions.ts(22,34): error TS2307: Cannot find module '../../../utils/checks.js' or its corresponding type declarations.
