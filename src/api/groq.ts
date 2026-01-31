@@ -4,7 +4,7 @@ import Groq from 'groq-sdk';
 import { OpenAI } from 'openai';
 import { executeTool, ALL_TOOLS, type ToolDefinition } from '../tools/index.js';
 import { getPromptAndTools } from '../prompts/composer.js';
-import { classifyRequest, getPromptForCategory } from '../prompts/router.js';
+import { classifyRequest, getPromptForCategory, getPromptForRequest } from '../prompts/router.js';
 import { PROVIDERS, getProviderForModel, getApiKey, DEFAULT_MODEL } from '../config/models.js';
 import {
     getToolPolicy,
@@ -18,6 +18,9 @@ import {
 
 // clientes por provedor
 const clients = new Map<string, any>();
+
+// Captura o CWD no momento em que o módulo é carregado (antes de Ink mudar)
+export const LAUNCH_CWD = process.cwd();
 
 /**
  * obtem ou cria cliente para provedor
@@ -70,6 +73,12 @@ COMPORTAMENTO:
 - Foque em tarefas do sistema Linux
 - Pode executar comandos, manipular arquivos, e gerenciar processos
 - Use exemplos praticos quando explicar comandos
+
+USO DE FERRAMENTAS:
+- Voce tem acesso a funcoes nativas (tools).
+- Use-as sempre que precisar interagir com o sistema.
+- NUNCA use sintaxe XML como <function> ou blocos de codigo para chamar ferramentas.
+- Use APENAS o mecanismo nativo de tool_calls.
 
 AREAS DE EXPERTISE:
 - Comandos Linux (bash, shell scripting)
@@ -158,19 +167,14 @@ export async function runAgent(
         const client = getClient(provider);
 
         // detecta acoes e obtem prompt + tools otimizados
-        const { prompt, tools: toolNames, actions } = getPromptAndTools(userMessage);
+        // Sempre usamos o roteador (que agora retorna sempre o prompt unificado)
+        const { prompt: rawPrompt } = getPromptForRequest(userMessage);
 
-        let systemPrompt: string;
-        let tools: ToolDefinition[];
+        // Injeta o CWD real no prompt
+        const systemPrompt = rawPrompt.replace(/\{\{CWD\}\}/g, LAUNCH_CWD);
 
-        if (actions.length > 0) {
-            systemPrompt = prompt;
-            tools = ALL_TOOLS.filter(t => toolNames.includes(t.function.name));
-        } else {
-            const category = classifyRequest(userMessage);
-            systemPrompt = getPromptForCategory(category);
-            tools = ALL_TOOLS;
-        }
+        // Sempre fornecemos todas as ferramentas para o modelo decidir
+        const tools = ALL_TOOLS;
 
         // adiciona mensagem do usuario
         addMessage({ role: 'user', content: userMessage });
@@ -198,12 +202,54 @@ export async function runAgent(
             const choice = response.choices[0];
             const assistantMessage = choice.message;
 
-            // se nao tem tool calls, retorna resposta final
+            // --- LOGICA DE RESILIENCIA ---
+            // Se o modelo alucinou XML ou falhou na tool call mas incluiu o comando no texto/failed_generation
+            if (!assistantMessage.tool_calls || assistantMessage.tool_calls.length === 0) {
+                const content = assistantMessage.content || '';
+
+                // Procura por padrões de alucinação XML:
+                // 1. <function=nome>JSON</function>
+                // 2. <function=nome={JSON}</function>  (modelo usa = antes do JSON)
+                // 3. <function=nome={JSON}<function>   (fecha errado)
+                let xmlMatch = content.match(/<function=(\w+)=?(\{[\s\S]*?\})<\/?\s*function\s*>/);
+
+                if (xmlMatch) {
+                    let [_, toolName, argsStr] = xmlMatch;
+
+                    // Limpa o nome da ferramenta de sujeira como % ou =
+                    toolName = toolName.replace(/[%=\s]/g, '');
+
+                    try {
+                        // Tenta limpar o JSON
+                        let cleanArgs = argsStr.trim();
+                        if (cleanArgs.startsWith('(') && cleanArgs.endsWith(')')) {
+                            cleanArgs = cleanArgs.slice(1, -1);
+                        }
+
+                        const args = JSON.parse(cleanArgs);
+
+                        // Converte para o formato que o loop espera
+                        assistantMessage.tool_calls = [{
+                            id: `call_${Math.random().toString(36).slice(2, 11)}`,
+                            type: 'function',
+                            function: {
+                                name: toolName,
+                                arguments: JSON.stringify(args)
+                            }
+                        }];
+                    } catch (e) {
+                        console.error('Falha ao parsear tool call alucinada:', e);
+                    }
+                }
+            }
+
+            // se nao tem tool calls (mesmo apos a tentativa de recuperacao), retorna resposta final
             if (!assistantMessage.tool_calls || assistantMessage.tool_calls.length === 0) {
                 const finalContent = assistantMessage.content || 'sem resposta';
                 addMessage({ role: 'assistant', content: finalContent });
                 return finalContent;
             }
+            // -----------------------------
 
             // adiciona mensagem do assistente com tool calls
             messages.push({
@@ -219,6 +265,17 @@ export async function runAgent(
 
                 try {
                     args = JSON.parse(toolCall.function.arguments);
+
+                    // Normaliza tipos (converte strings numericas para numbers onde apropriado)
+                    // Isso ajuda se o modelo ignorar o schema de tipos
+                    for (const key in args) {
+                        if (typeof args[key] === 'string' && /^\d+$/.test(args[key] as string)) {
+                            // Se a chave for algo como 'limit' ou 'max_lines', converte para numero
+                            if (['limit', 'max_lines', 'max_results', 'count'].includes(key)) {
+                                args[key] = parseInt(args[key] as string, 10);
+                            }
+                        }
+                    }
                 } catch (e) {
                     console.error(`Failed to parse arguments for ${toolName}:`, e);
                 }

@@ -2,6 +2,7 @@
 
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import { LAUNCH_CWD } from '../api/groq.js';
 
 const execAsync = promisify(exec);
 
@@ -23,18 +24,21 @@ function isDangerous(command: string): boolean {
 }
 
 /**
- * executa um comando shell
+ * executa um comando shell no diretório de lançamento
  */
-export async function runCommand(command: string): Promise<string> {
+export async function runCommand(command: string, cwd?: string): Promise<string> {
     try {
         // verificacao de seguranca
         if (isDangerous(command)) {
             return `⛔ comando bloqueado por seguranca: ${command}`;
         }
 
+        const workingDir = cwd || LAUNCH_CWD;
+
         const { stdout, stderr } = await execAsync(command, {
             timeout: 120000, // 2 minutos
             maxBuffer: 1024 * 1024, // 1MB
+            cwd: workingDir, // Executa no diretório correto
         });
 
         const output = stdout.trim();
@@ -45,10 +49,10 @@ export async function runCommand(command: string): Promise<string> {
         }
 
         if (output) {
-            return `✅ comando executado com sucesso:\n${output}`;
+            return `comando executado com sucesso:\n${output}`;
         }
 
-        return '✅ comando executado com sucesso (sem saida).';
+        return 'comando executado com sucesso (sem saida).';
     } catch (error: any) {
         if (error.killed) {
             return '⏱️ erro: comando demorou mais de 2 minutos e foi cancelado.';
@@ -58,9 +62,9 @@ export async function runCommand(command: string): Promise<string> {
 }
 
 /**
- * executa um comando com privilegios sudo
+ * executa um comando com privilegios sudo no diretório de lançamento
  */
-export async function runSudoCommand(command: string): Promise<string> {
+export async function runSudoCommand(command: string, cwd?: string): Promise<string> {
     try {
         // remove sudo se ja estiver no comando
         let cleanCommand = command.trim();
@@ -74,10 +78,12 @@ export async function runSudoCommand(command: string): Promise<string> {
         }
 
         const fullCommand = `sudo ${cleanCommand}`;
+        const workingDir = cwd || LAUNCH_CWD;
 
         const { stdout, stderr } = await execAsync(fullCommand, {
             timeout: 300000, // 5 minutos
             maxBuffer: 1024 * 1024 * 5, // 5MB
+            cwd: workingDir,
         });
 
         const output = stdout.trim();
@@ -88,10 +94,10 @@ export async function runSudoCommand(command: string): Promise<string> {
         }
 
         if (output) {
-            return `✅ comando sudo executado com sucesso:\n${output}`;
+            return `comando sudo executado com sucesso:\n${output}`;
         }
 
-        return '✅ comando sudo executado com sucesso.';
+        return 'comando sudo executado com sucesso.';
     } catch (error: any) {
         if (error.killed) {
             return '⏱️ erro: comando sudo demorou mais de 5 minutos e foi cancelado.';
@@ -106,9 +112,9 @@ export async function runSudoCommand(command: string): Promise<string> {
 export async function executeExecutorTool(toolName: string, args: any): Promise<string> {
     switch (toolName) {
         case 'run_command':
-            return await runCommand(args.command);
+            return await runCommand(args.command, args.cwd);
         case 'run_sudo_command':
-            return await runSudoCommand(args.command);
+            return await runSudoCommand(args.command, args.cwd);
         default:
             return `erro: tool '${toolName}' nao encontrada.`;
     }

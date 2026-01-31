@@ -2,16 +2,21 @@
 
 import { promises as fs } from 'fs';
 import { homedir } from 'os';
-import { join, resolve } from 'path';
+import { join, resolve, isAbsolute } from 'path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import { LAUNCH_CWD } from '../api/groq.js';
 
 const execAsync = promisify(exec);
 
-// expande ~ e variaveis de ambiente
+// expande ~ e resolve caminhos relativos a partir do diretório de lançamento
 function expandPath(path: string): string {
     if (path.startsWith('~')) {
         return join(homedir(), path.slice(1));
+    }
+    // Se for caminho relativo, resolve a partir do LAUNCH_CWD
+    if (!isAbsolute(path)) {
+        return resolve(LAUNCH_CWD, path);
     }
     return resolve(path);
 }
